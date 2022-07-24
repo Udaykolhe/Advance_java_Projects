@@ -1,0 +1,17 @@
+package com.noida;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="person")
+public class Person {
+
+	private int pid;
+	private String pname;
+	private String city;
+	
+	
+	
+	
+}

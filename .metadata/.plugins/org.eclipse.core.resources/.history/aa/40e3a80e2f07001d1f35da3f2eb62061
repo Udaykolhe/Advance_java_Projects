@@ -1,0 +1,20 @@
+package com.noida;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class SelfReference {
+
+	public static void main(String[] args) {
+		SessionFactory factory=new Configuration().configure().buildSessionFactory();
+		
+		
+		Person person=new Person();
+		Manager mgr = new Manager();
+		
+		person.setPname("Uday");
+		
+
+	}
+
+}

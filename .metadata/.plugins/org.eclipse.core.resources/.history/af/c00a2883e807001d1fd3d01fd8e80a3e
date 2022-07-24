@@ -1,0 +1,10 @@
+package com.noida.beans;
+
+public class Address {
+	private int aid;
+	private String street;
+	private String city;
+	private String ;
+	pivate String 
+
+}

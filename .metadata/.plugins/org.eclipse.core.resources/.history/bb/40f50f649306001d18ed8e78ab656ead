@@ -1,0 +1,14 @@
+package com.keys.many;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employees")
+public class Employee {
+	
+	private int id;
+	private String ename;
+	private String city;
+
+}

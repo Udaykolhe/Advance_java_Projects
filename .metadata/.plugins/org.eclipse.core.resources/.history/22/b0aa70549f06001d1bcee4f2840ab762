@@ -1,0 +1,6 @@
+package com.demo.many;
+
+public class Laptop {
+    private int Lpid;
+    private String lname;
+}

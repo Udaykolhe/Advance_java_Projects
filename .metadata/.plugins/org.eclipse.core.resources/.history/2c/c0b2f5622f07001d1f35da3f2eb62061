@@ -1,0 +1,27 @@
+package com.noida;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class SelfReference {
+
+	public static void main(String[] args) {
+		SessionFactory factory=new Configuration().configure().buildSessionFactory();
+		
+		
+		Person person=new Person();
+		Manager mgr = new Manager();
+		
+		person.setPname("uday");
+		
+		List<Person> list = new ArrayList<Person>();
+		list.add(person));
+		
+		person.setMgr(list);
+
+	}
+
+}

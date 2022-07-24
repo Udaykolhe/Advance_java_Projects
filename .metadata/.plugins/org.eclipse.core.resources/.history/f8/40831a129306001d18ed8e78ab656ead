@@ -1,0 +1,58 @@
+package com.demo;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "departments")
+public class Department {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "dept_id")
+	private int deptid;
+	private String deptname;
+	
+	@OneToOne(mappedBy="dept")
+	private Employee emp;
+
+	public Employee getEmp() {
+		return emp;
+	}
+
+	public void setEmp(Employee emp) {
+		this.emp = emp;
+	}
+
+	public Department(int deptid, String deptname) {
+		super();
+		this.deptid = deptid;
+		this.deptname = deptname;
+	}
+
+	public Department() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getDeptid() {
+		return deptid;
+	}
+
+	public void setDeptid(int deptid) {
+		this.deptid = deptid;
+	}
+
+	public String getDeptname() {
+		return deptname;
+	}
+
+	public void setDeptname(String deptname) {
+		this.deptname = deptname;
+	}
+
+}

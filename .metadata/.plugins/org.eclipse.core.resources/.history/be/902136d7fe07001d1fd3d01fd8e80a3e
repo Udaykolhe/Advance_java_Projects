@@ -1,0 +1,24 @@
+package com.noida;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.noida.beans.Book;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+        
+        Book book= new Book();
+        Customer cust = new Customer();
+        
+    }
+}

@@ -1,0 +1,29 @@
+package com.noida.beans;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="address")
+public class Address {
+	@Id
+	@GeneratedValue
+	@Column(name="ADD_ID")
+	private int aid;
+	@Column(name="STREET")
+	private String street;
+	@Column(name="CITY")
+	private String city;
+	@Column(name="DIST")
+	private String dist;
+	@Column(name="COUNTRY")
+	private String country;
+	
+	@OneToOne(mappedBy = "cust")
+	private Customer add;
+
+}

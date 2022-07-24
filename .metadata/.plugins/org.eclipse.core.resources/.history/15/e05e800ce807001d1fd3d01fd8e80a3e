@@ -1,0 +1,9 @@
+package com.noida.beans;
+
+public class Customer {
+	( cid ,cname, address,phone )
+     private int cid;
+	private String cname;
+	private String address;
+	private long phone.
+}

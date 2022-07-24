@@ -1,0 +1,31 @@
+package com.noida.beans;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="customers")
+public class Customer {
+	@Id
+	@GeneratedValue
+	@Column(name="CUST_ID")
+     private int cid;
+	@Column(name="CUST_NAME")
+	private String cname;
+	
+	@Column(name="MOBILE_NO")
+	private long phone;
+	
+	
+	private Address address;
+	
+	@ManyToMany
+	private List<Book> book;
+	
+}

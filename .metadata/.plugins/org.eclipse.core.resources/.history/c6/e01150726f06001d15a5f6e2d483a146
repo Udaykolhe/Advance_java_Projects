@@ -1,0 +1,16 @@
+package com.keys;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "vehicals")
+public class Vehicle {
+    @Id
+    @GeneratedValue(str)
+    
+	private int vid;
+	private String vname;
+}

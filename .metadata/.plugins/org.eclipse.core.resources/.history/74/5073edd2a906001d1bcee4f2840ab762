@@ -1,0 +1,63 @@
+package com.keys.many;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class OneToMany {
+
+	public static void main(String[] args) {
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+
+		Department dept = new Department();
+		dept.setDname("Production");
+		
+		Department dept1 = new Department();
+		dept1.setDname("Admin");
+
+		Employee emp = new Employee();
+		emp.setEname("Uday");
+		emp.setCity("Indore");
+		emp.setAddDate(new Date());
+        emp.setDept(dept);
+		
+		Employee emp1 = new Employee();
+		emp1.setEname("Vipul");
+		emp1.setCity("Bhopal");
+		emp1.setAddDate(new Date());
+		emp1.setDept(dept);
+		
+			
+		
+		Employee emp3 = new Employee();
+		emp3.setEname("Rahul");
+		emp3.setCity("Pune");
+		emp3.setAddDate(new Date());
+		emp3.setDept(dept1);
+		
+		
+
+		List<Employee> elist = new ArrayList<Employee>();
+		elist.add(emp);
+		elist.add(emp1);
+		elist.add(emp3);
+
+		dept.setEmp(elist);
+
+		Session session = factory.openSession();
+		session.beginTransaction();
+
+		session.save(dept);
+		session.save(dept1)
+		
+
+		session.getTransaction().commit();
+		session.close();
+
+	}
+
+}

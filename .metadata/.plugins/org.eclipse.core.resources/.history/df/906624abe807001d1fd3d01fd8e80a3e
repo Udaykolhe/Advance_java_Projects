@@ -1,0 +1,18 @@
+package com.noida.beans;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+public class Address {
+	@Id
+	@GeneratedValue
+	@Column(name="ADD_ID")
+	private int aid;
+	@Column(name="STREET")
+	private String street;
+	private String city;
+	private String dist;
+	private String country;
+
+}

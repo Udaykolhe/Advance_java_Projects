@@ -1,0 +1,9 @@
+package com.keys.many;
+
+
+
+@Entity
+@Table(name = "departments")
+public class Department {
+	
+}

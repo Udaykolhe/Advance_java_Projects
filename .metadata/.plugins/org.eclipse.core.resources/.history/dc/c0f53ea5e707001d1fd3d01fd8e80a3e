@@ -1,0 +1,16 @@
+package com.noida.beans;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="books")
+public class Book {
+	   private int isbn;
+	   private String bname;
+	   private String aname;
+	   private double price;
+	   
+	   
+
+}

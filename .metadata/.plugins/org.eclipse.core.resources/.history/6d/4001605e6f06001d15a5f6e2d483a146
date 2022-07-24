@@ -1,0 +1,11 @@
+package com.keys;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "vehicals")
+public class Vehicle {
+        private int vid;
+        private String vname;
+}

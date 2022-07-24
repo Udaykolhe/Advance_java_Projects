@@ -1,0 +1,12 @@
+package com.noida.beans;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="bookissued")
+public class BookIssued {
+       
+	private Book isbn;
+    private Customer cid;
+}

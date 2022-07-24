@@ -1,0 +1,23 @@
+package com.demo.many;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="laptops")
+public class Laptop {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int Lpid;
+    private String lname;
+     
+    
+    private List<User> user;
+    
+}

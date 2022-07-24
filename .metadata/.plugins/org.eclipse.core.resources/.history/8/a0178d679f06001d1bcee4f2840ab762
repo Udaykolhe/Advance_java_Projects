@@ -1,0 +1,16 @@
+package com.demo.many;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="")
+public class User {
+   private int id;
+   private String uname;
+   private String city;
+   
+   private List<Laptop> lp;
+}

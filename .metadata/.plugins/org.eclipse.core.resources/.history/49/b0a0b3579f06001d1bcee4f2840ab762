@@ -1,0 +1,12 @@
+package com.demo.many;
+
+import java.util.List;
+
+public class Laptop {
+    private int Lpid;
+    private String lname;
+     
+    
+    private List<User>
+    
+}
