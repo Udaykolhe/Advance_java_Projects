@@ -1,6 +1,0 @@
-package com.keys;
-
-public class Vehicle {
-        private int vid;
-        private String vname;
-}

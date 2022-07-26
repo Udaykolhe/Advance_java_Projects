@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+
+	<!-- Setter Injection : - -->
+	<!-- autowire property byName=use id="name of pojo class field name" byType=use 
+		id="by Pojo class name" and no need to be write a ref attribute in parents 
+		class in bean tag -->
+
+
+	<bean id="em" class="com.spring.beans.Employee" autowire="byName">
+		<property name="id" value="101"></property>
+		<property name="name" value="Uday"></property>
+		<!-- <property name="addr" ref="ad"></property> -->
+	</bean>
+
+	<bean id="ad" class="com.spring.beans.Address">
+		<property name="city" value="Nepa"></property>
+		<property name="dist" value="Burhanpur"></property>
+	</bean>
+
+
+	<!-- Costruction Injection : - -->
+
+	<!-- <bean id="emp1" class="com.spring.beans.Employee"
+		autowire="byType">
+		<constructor-arg index="0" value="105"></constructor-arg>
+		<constructor-arg index="1" value="Uday"></constructor-arg>
+		<constructor-arg index="2" ref="ad"></constructor-arg>
+	</bean>
+ -->
+
+
+	<!-- Collection Bean:- -->
+	<bean id="std" class="com.spring.beans.Student">
+		<property name="stdid" value="101"></property>
+		<property name="name" value="Uday"></property>
+		<property name="sub">
+			<list>
+				<value>Core Java</value>
+				<value>Advance java</value>
+				<value>Opertaing System</value>
+			</list>
+		</property>
+
+	</bean>
+
+
+
+
+</beans>

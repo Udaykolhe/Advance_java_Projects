@@ -1,7 +1,0 @@
-package com.demo.many;
-
-public class User {
-   private int id;
-   private String uname;
-   private String city;
-}
