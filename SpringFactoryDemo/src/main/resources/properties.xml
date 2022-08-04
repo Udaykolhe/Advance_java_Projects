@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   
+   <bean id="placeHolderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+         <property name="location" value="data.properties"></property>
+   </bean>
+   
+   <bean id="exam" class="com.cdac.Exam">
+       <property name="code" value="${exam.code}"></property>
+       <property name="subject" value="${exam.subject}"></property>
+       <property name="mode" value="${exam.mode}"></property>    
+   </bean>
+   </beans>

@@ -1,7 +1,0 @@
-package com.noida.beans;
-
-public class BookIssued {
-       
-	private Book isbn;
-    private Customer cid;
-}

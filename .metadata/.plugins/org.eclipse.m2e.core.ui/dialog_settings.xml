@@ -2,6 +2,12 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Java Prg\Advance Java\SpringWebAppDemo"/>
+			<item value="D:\Java Prg\Advance Java\SpringWebAppDemo\src\main\webapp\WEB-INF\web.xml"/>
+			<item value="D:\Java Prg\Advance Java\SpringFactoryDemo"/>
+			<item value="D:\Java Prg\Advance Java\SpringAnnotationDemo\src\main\resources\annotion.xml"/>
+			<item value="D:\Java Prg\Advance Java\SpringBeanDemo"/>
+			<item value="D:\Java Prg\Mini_Projects\CollectionSetDemo"/>
 			<item value="D:\Java Prg\Advance Java\MavenProject\src\main\java\com\keys\many\Employee.java"/>
 			<item value="D:\Java Prg\Advance Java"/>
 			<item value="D:\Java Prg\Advance Java\MavenProject\src\main\java\hibernate.cfg.xml"/>
@@ -28,25 +34,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.noida"/>
-			<item value="com.hibernate"/>
-			<item value="org.hibernate"/>
-			<item value="com.tut.Md"/>
-			<item value="com.tut.dddd"/>
-			<item value="com.tut"/>
 		</list>
 		<list key="groupId">
-			<item value="com.noida"/>
-			<item value="com.hibernate"/>
-			<item value="org.hibernate"/>
-			<item value="com.tut"/>
 		</list>
 		<list key="artifactId">
-			<item value="Employee_Management_System"/>
-			<item value="MavenProject"/>
-			<item value="mavenDemo"/>
-			<item value="Md"/>
-			<item value="dddd"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -62,10 +53,16 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="SpringStudentDemo"/>
+			<item value="SpringCrudConsole"/>
 		</list>
 		<list key="name">
+			<item value="SpringStudentDemo"/>
+			<item value="SpringCrudConsole"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringStudentDemo"/>
+			<item value="SpringCrudConsole"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -122,7 +119,7 @@
 	</section>
 	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
 		<item key="width" value="480"/>
-		<item key="height" value="529"/>
+		<item key="height" value="531"/>
 		<item key="x" value="443"/>
 		<item key="y" value="8"/>
 	</section>

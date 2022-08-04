@@ -1,9 +1,0 @@
-package com.noida.beans;
-
-public class Book {
-	   private int isbn;
-	   private String bname;
-	   private String aname;
-	   private double price;
-
-}

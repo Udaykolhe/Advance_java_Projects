@@ -14,7 +14,7 @@
 		class in bean tag -->
 
 
-	<bean id="em" class="com.spring.beans.Employee" autowire="byName">
+	<bean id="em" class="com.spring.beans.Employee" autowire="byType">
 		<property name="id" value="101"></property>
 		<property name="name" value="Uday"></property>
 		<!-- <property name="addr" ref="ad"></property> -->

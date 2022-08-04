@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 
 		UserService uservice= new UserServiceImpl(); 
 		User user= uservice.validateUser(username,password);
-		if(user!=null &&user.getRole().equals("admin")) {
+		if(user!=null && user.getRole().equals("admin")) {
 			HttpSession session = request.getSession();
 			session.setMaxInactiveInterval(50);
 			if(session.isNew()) {
