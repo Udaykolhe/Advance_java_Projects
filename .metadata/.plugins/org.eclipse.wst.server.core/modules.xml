@@ -9,4 +9,5 @@
   <module moduleId="org.eclipse.jst.jee.server:Library Management System" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:SpringWebAppDemo" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.j2ee.server:SpringWebAppDemo" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:StudentMvcDemo" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

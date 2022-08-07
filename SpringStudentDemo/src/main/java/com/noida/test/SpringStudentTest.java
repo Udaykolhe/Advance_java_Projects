@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.dao.EmptyResultDataAccessException;
 
+import com.noida.model.Student;
 import com.noida.service.StudentService;
 
 public class SpringStudentTest {
@@ -17,18 +19,18 @@ public class SpringStudentTest {
 		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println("1.Add Student"
-						       + "\n2.Delete Product"
-					       	   + "\n3.Search Product By Id"
-						       + "\n4.Search Product By Name"
+						       + "\n2.Delete Student"
+					       	   + "\n3.Search Student By Id"
+						       + "\n4.Search Student By Name"
 	    	  		           + "\n5.Display All"
-	    	  		           + "\n6.Sort By Product Name"
-	    	  		           + "\n7.Modify Price"
+	    	  		           + "\n6.Sort By Student Name"
+	    	  		           + "\n7.Modify Mobile-Number"
 	    	  		           + "\n8.Exit");
 	    System.out.println("Enter Choise : ");
 		choise=sc.nextInt();
 		switch(choise) {
 		case 1:
-			//Create Product
+			//Create Student
 			int n = studentService.addStudent();
 			if(n>0) {
 				System.out.println("Insertion Done");
@@ -36,10 +38,10 @@ public class SpringStudentTest {
 				System.out.println("Insertion not Done");
 			}
 			break;
-		/*case 2 :
+		case 2 :
 			System.out.println("Enter Id : ");
 			int id=sc.nextInt();
-			boolean b=pservice.deleteById(id);
+			boolean b=studentService.deleteById(id);
 			if(b) {
 				System.out.println("Deletion Done : ");
 			}else {
@@ -49,26 +51,29 @@ public class SpringStudentTest {
 		case 3 :
 			System.out.println("Enter the Id : ");
 			id = sc.nextInt();
-			Product p=pservice.getById(id);
+			try {
+			Student p=studentService.getById(id);
+			
 			if(p!=null){
 				System.out.println(p);
-			}else {
-				System.out.println("Wrong Id");
+			}
+			}catch (EmptyResultDataAccessException e){
+				System.out.println("Wrong Id enter valid id !");
 			}
 			break;
 		case 4:
 			System.out.println("Enter Name : ");
 			String nm=sc.next();
-			List<Product>  plist=pservice.searchByPname(nm);
-			if(plist!=null) {
-			  plist.forEach(System.out::println);
+			List<Student>  slist=studentService.searchByName(nm);
+			if(slist!=null) {
+			  slist.forEach(System.out::println);
 			}
 			
 			break;
 		case 5:
-			plist=pservice.displayAll();
-			if(plist!=null) {
-				plist.forEach(System.out::println);
+			slist=studentService.displayAll();
+			if(slist!=null) {
+				slist.forEach(System.out::println);
 			}else {
 				System.out.println("Not Found");
 			}
@@ -80,15 +85,15 @@ public class SpringStudentTest {
 		case 7:
 			System.out.println("Enter Id : ");
 			id=sc.nextInt();
-			System.out.println("Enter Update Price : ");
-			float price=sc.nextFloat();
-			boolean x=pservice.updatePrice(id,price);
+			System.out.println("Enter Update phone-Number : ");
+			String phone=sc.next();
+			boolean x=studentService.updatePhone(id,phone);
 			if(x) {
 				System.out.println("Update done");
 			}else {
 				System.out.println("Not Update");
 			}
-			break;*/
+			break;
 		case 8:
 			sc.close();
 			

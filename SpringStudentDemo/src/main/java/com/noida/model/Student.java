@@ -1,8 +1,11 @@
 package com.noida.model;
 
+import java.util.Random;
+
 import org.springframework.stereotype.Component;
 
 @Component
+
 public class Student {
 	private int id;
 	private String firstname;
@@ -15,9 +18,8 @@ public class Student {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(int id,String firstname, String lastname, String phone, String email) {
+	public Student(String firstname, String lastname, String phone, String email) {
 		super();
-		this.id=id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.phone = phone;
@@ -66,11 +68,22 @@ public class Student {
 		this.email = email;
 	}
 
+	
+	
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", phone=" + phone
-				+ ", email=" + email + "]";
+
+		return "{\n"
+				+ "Student List :-----> \n"
+				+ "Student Id : "+id+ ",\n"
+				+ "		First Name : "+firstname+ ",\n"
+				+ "			Last Name : " +lastname+",\n"
+				+ "				Phone : "+phone+ ",\n"
+				+ "					Email Id : "+email+ "\n"
+			                             + " 					}\n";
+		
 	}
+	
 
 	
 	

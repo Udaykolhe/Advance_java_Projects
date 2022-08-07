@@ -2,7 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Java Prg\Advance Java\SpringWebMvcDemo"/>
 			<item value="D:\Java Prg\Advance Java\SpringWebAppDemo"/>
+			<item value="D:\Java Prg\Advance Java\SpringStudentDemo\src\main\java\com\noida\test\SpringStudentTest.java"/>
 			<item value="D:\Java Prg\Advance Java\SpringWebAppDemo\src\main\webapp\WEB-INF\web.xml"/>
 			<item value="D:\Java Prg\Advance Java\SpringFactoryDemo"/>
 			<item value="D:\Java Prg\Advance Java\SpringAnnotationDemo\src\main\resources\annotion.xml"/>
@@ -34,10 +36,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.demo"/>
 		</list>
 		<list key="groupId">
+			<item value="com.demo"/>
 		</list>
 		<list key="artifactId">
+			<item value="StudentMvcDemo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -53,16 +58,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="SpringStudentDemo"/>
-			<item value="SpringCrudConsole"/>
 		</list>
 		<list key="name">
-			<item value="SpringStudentDemo"/>
-			<item value="SpringCrudConsole"/>
 		</list>
 		<list key="artifactId">
-			<item value="SpringStudentDemo"/>
-			<item value="SpringCrudConsole"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

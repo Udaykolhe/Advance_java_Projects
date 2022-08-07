@@ -34,7 +34,7 @@ https://www.springframework.org/schema/context/spring-context.xsd">
 	</bean>
 
 	<bean id="jdbcTemplate"
-		class="ord.springframework.jdbc.core.JdbcTemplate">
+		class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="ds"></property>
 	</bean>
 </beans>
