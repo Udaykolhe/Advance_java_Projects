@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Java Prg\Advance Java\SpringMvcWithOutXml"/>
+			<item value="D:\Java Prg\Mini_Projects\CollectionSetDemo"/>
 			<item value="D:\Java Prg\Advance Java\SpringWebMvcDemo"/>
 			<item value="D:\Java Prg\Advance Java\SpringWebAppDemo"/>
 			<item value="D:\Java Prg\Advance Java\SpringStudentDemo\src\main\java\com\noida\test\SpringStudentTest.java"/>
@@ -9,7 +11,6 @@
 			<item value="D:\Java Prg\Advance Java\SpringFactoryDemo"/>
 			<item value="D:\Java Prg\Advance Java\SpringAnnotationDemo\src\main\resources\annotion.xml"/>
 			<item value="D:\Java Prg\Advance Java\SpringBeanDemo"/>
-			<item value="D:\Java Prg\Mini_Projects\CollectionSetDemo"/>
 			<item value="D:\Java Prg\Advance Java\MavenProject\src\main\java\com\keys\many\Employee.java"/>
 			<item value="D:\Java Prg\Advance Java"/>
 			<item value="D:\Java Prg\Advance Java\MavenProject\src\main\java\hibernate.cfg.xml"/>
@@ -36,13 +37,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.demo"/>
 		</list>
 		<list key="groupId">
-			<item value="com.demo"/>
 		</list>
 		<list key="artifactId">
-			<item value="StudentMvcDemo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -58,10 +56,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="SpringRestFullAPI"/>
 		</list>
 		<list key="name">
+			<item value="SpringRestFullAPI"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringRestFullAPI"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

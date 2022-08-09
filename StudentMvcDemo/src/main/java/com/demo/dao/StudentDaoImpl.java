@@ -1,14 +1,12 @@
 package com.demo.dao;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.demo.model.Student;
@@ -31,33 +29,56 @@ public class StudentDaoImpl implements StudentDao {
 		return data;
 
 	}
+	
+	// Find Students:------------
+	public List<Student> findAll() {
+		String sql = "SELECT * FROM students";
+		List<Student> slist = jdbcTemplate.query(sql,BeanPropertyRowMapper.newInstance(Student.class));
+		return slist;
+	}
+
 
 	/*
-	 * public List<Student> findAll() { String sql="SELECT * FROM student"; return
-	 * jdbcTemplate.query(sql,(rs,num)-> { Student student = new Student();
-	 * student.setId(rs.getInt(1)); student.setFirstname(rs.getString(2));
-	 * student.setLastname(rs.getString(3)); student.setPhone(rs.getString(3));
-	 * student.setEmail(rs.getString(4)); return student; });
+	 * public List<Student> findAll() { 
+	 * String sql="SELECT * FROM student"; 
+	 * return
+	 * jdbcTemplate.query(sql,(rs,num)-> { 
+	 * Student student = new Student();
+	 * student.setId(rs.getInt(1));
+	 * student.setFirstname(rs.getString(2));
+	 * student.setLastname(rs.getString(3)); 
+	 * student.setPhone(rs.getString(3));
+	 * student.setEmail(rs.getString(4)); 
+	 * return student; });
 	 * 
 	 * }
 	 */
 
-	public List<Student> findAll() {
-		String sql = "SELECT * FROM students";
-		List<Student> slist = jdbcTemplate.query(sql, new RowMapper<Student>() {
+//	public List<Student> findAll() {
+//		String sql = "SELECT * FROM students";
+//		List<Student> slist = jdbcTemplate.query(sql, new RowMapper<Student>() {
+//
+//			public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
+//				Student student = new Student();
+//				student.setId(rs.getInt(1));
+//				student.setFirstname(rs.getString(2));
+//				student.setLastname(rs.getString(3));
+//				student.setPhone(rs.getString(4));
+//				student.setEmail(rs.getString(5));
+//				return student;
+//			}
+//
+//		});
+//		return slist;
+//	}
+	
+	
+	// Find By Id:---------->
+	@SuppressWarnings("deprecation")
+	public Student getById(int id) throws EmptyResultDataAccessException {
+		String sql = "SELECT * FROM students WHERE id=?";
+		return jdbcTemplate.queryForObject(sql, new Object[] { id }, BeanPropertyRowMapper.newInstance(Student.class));
 
-			public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Student student = new Student();
-				student.setId(rs.getInt(1));
-				student.setFirstname(rs.getString(2));
-				student.setLastname(rs.getString(3));
-				student.setPhone(rs.getString(4));
-				student.setEmail(rs.getString(5));
-				return student;
-			}
-
-		});
-		return slist;
 	}
 
 	/*
@@ -74,11 +95,7 @@ public class StudentDaoImpl implements StudentDao {
 	 * }
 	 */
 
-	public Student getById(int id) throws EmptyResultDataAccessException {
-		String sql = "SELECT * FROM students WHERE id=?";
-		return jdbcTemplate.queryForObject(sql, new Object[] { id }, BeanPropertyRowMapper.newInstance(Student.class));
-
-	}
+	
 
 //	public boolean updateMobileNo(int id, String phone) {
 //		String sql = "UPDATE students SET phone=? WHERE id=?";
